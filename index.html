@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso de Desactivación</title>
+    <!-- Carga de Tailwind CSS para utilidades de estilo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración de color de Tailwind para el resalte -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'resalte': '#1800ad', // Color de resalte personalizado
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Asegura que el cuerpo ocupe toda la altura y tenga fondo blanco */
+        body {
+            background-color: white;
+            min-height: 100vh;
+        }
+    </style>
+    <!-- Ya no necesitamos GSAP para este mensaje, así que lo omitimos -->
+</head>
+<body class="font-sans flex items-center justify-center p-6 h-screen bg-white">
+
+    <div class="text-center p-8 sm:p-12 bg-gray-50 rounded-2xl shadow-2xl max-w-md w-full mx-auto border-4 border-resalte transition-all duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-red-600 mx-auto mb-4" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 102 0V6zm-1 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+        </svg>
+        
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-3">
+            Sitio Web No Disponible
+        </h1>
+        
+        <p class="text-lg text-gray-600 mb-8">
+            Lamentamos informar que este recurso ha sido desactivado permanentemente.
+        </p>
+        
+        <p class="text-2xl font-bold text-resalte">
+            ¡Les deseamos un buen día!
+        </p>
+    </div>
+
+</body>
+</html>
